@@ -1,0 +1,21 @@
+@use "~/src/scss/colors.scss" as *;
+
+
+.arrowUp {
+ font-size: 2.5rem;
+  position: fixed;
+  bottom: 2.25rem;
+  right: 1.25rem;
+  width: 4.125rem;
+  height: 4.125rem;
+  background-color: $secondary;
+  text-align: center;
+  padding: .3125rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #f7f7f7;
+  z-index : 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

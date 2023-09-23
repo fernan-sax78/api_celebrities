@@ -1,0 +1,67 @@
+@use "~/src/scss/colors.scss" as *;
+
+.form__group {
+  position: relative;
+  padding: .9375rem 0 0;
+  margin: 3.125rem auto;
+  width: min(80vw, 60%);
+}
+
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.3rem);
+  color: $primary;
+  padding: .4375rem 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+  &::placeholder {
+    color: $gray;
+    @media (max-width : 48rem) {
+      color: transparent;
+    }
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 1.25rem;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1.3rem;
+    color: $primary;
+    font-weight:500;    
+  }
+  padding-bottom: .375rem;  
+  font-weight: 400;
+  border-width: .1875rem;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+
