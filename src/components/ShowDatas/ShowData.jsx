@@ -50,7 +50,7 @@ import { fetchData , charge_children } from "@/functions/fetch";
          return   item.lastname.toUpperCase().includes(inputValue) ;
 
       })
-      .slice( 0 , 8)
+      .slice( 0 , 12)
       .map((item ) => (
         
             

@@ -20,7 +20,7 @@ function Footer() {
             {/* <i class="fa-solid fa-arrow-right"></i> */}
             <FontAwesomeIcon icon={faArrowRight} />
              <span>Visit My</span>
-            <a href="#" > 😉 Portfolio</a> WebSite
+            <a href="https://titodev.uk" target = "_blank" > 😉 Portfolio</a> WebSite
         </h3>
      </div>
     <div className = {styles.info}>
