@@ -1,4 +1,5 @@
 import '@/scss/index.scss';
+import { Head } from 'next/head';
 import {Roboto} from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -13,8 +14,10 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={roboto.className}>
+    <>
+    <main className={roboto.className}>    
        <Component {...pageProps} />
     </main>
+    </>
     )
 }
