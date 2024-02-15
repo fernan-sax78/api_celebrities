@@ -24,26 +24,21 @@ import { fetchData , charge_children } from "@/functions/fetch";
   useEffect(() => {
     
     fetchData(setListing , setLoading);
-    charge_children(ref , setMess , inputValue);
+    charge_children(ref , setMess , inputValue );
 
   }, [inputValue]);
 
-
-   
-          
-
     
-
   return (
     
-    <div ref = {ref}>
+    <section ref = {ref}>
 
         {loading ? <Loader /> : ''}
         {mess}
         
         <div className = {styles.main} >
 
-      {Listing.filter((item) => {
+      {  Listing.filter((item) => {
 
        //console.log(ref)
 
@@ -76,13 +71,12 @@ import { fetchData , charge_children } from "@/functions/fetch";
             </div>
           
         ))
-        
-        }
+      }
         
      
       </div>
      
-    </div>
+    </section>
   );
 }
 
