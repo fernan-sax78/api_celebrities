@@ -20,11 +20,11 @@ function Footer() {
             {/* <i class="fa-solid fa-arrow-right"></i> */}
             <FontAwesomeIcon icon={faArrowRight} />
              <span>Visit My</span>
-            <a href="https://titodev.uk" target = "_blank" > 😉 Portfolio</a> WebSite
+            <a href="https://titodev-portfolio.netlify.app/" target = "_blank" > 😉 Portfolio</a> WebSite
         </h3>
      </div>
     <div className = {styles.info}>
-        <h3>{year} titodev.uk " I ❤️ WEB "<span className = {styles.getYear} id="date_">{useDate} years of experience</span></h3>
+        <h3>{year} titodev " I ❤️ WEB "<span className = {styles.getYear} id="date_">{useDate} years of experience</span></h3>
      <div className= {styles.info}>
         <span className = {styles.span}>In this project I used my own API</span><br/><br/>
         <span>Nodejs-Express-MongoDB</span>
