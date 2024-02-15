@@ -31,16 +31,14 @@ import { fetchData , charge_children } from "@/functions/fetch";
     
   return (
     
-    <section ref = {ref}>
+    <section>
 
-        {loading ? <Loader /> : ''}
+        {loading ? <Loader /> : null}
         {mess}
         
         <div className = {styles.main} >
 
       {  Listing.filter((item) => {
-
-       //console.log(ref)
 
          return   item.lastname.toUpperCase().includes(inputValue) ;
 
@@ -49,7 +47,7 @@ import { fetchData , charge_children } from "@/functions/fetch";
       .map((item ) => (
         
             
-         <div className = {`${styles.card}`} key={item._id} >
+         <div className = {`${styles.card}`} key={item._id} ref = {ref}>
           
             <img src= {item.photo} alt="photo"/>
            

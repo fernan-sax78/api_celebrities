@@ -1,5 +1,5 @@
 import Empty from "@/components/Empty_mess/Empty";
-
+import { useEffect } from "react";
 const api_ = process.env.NEXT_PUBLIC_NOT_API_CELEBRITIES;
 
 export const fetchData = async (setListing , setLoading) => {
@@ -16,9 +16,9 @@ export const fetchData = async (setListing , setLoading) => {
     };
 
 export  const charge_children = (el , setMess , inputValue ) => {
+    
 
- 
-    if (el.current.children[1] === undefined) {
+    if (el.current === null) {
       setMess(<Empty value = {inputValue}/>)
     }else{
       setMess('')
